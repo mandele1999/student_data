@@ -61,8 +61,11 @@ Extracurricular: Participation in extracurricular activities, where 0 indicates 
 ### Academic Performance
 
 **GPA**: Grade Point Average on a scale from 2.0 to 4.0, influenced by study habits, parental involvement, and extracurricular activities.
+
 **Target Variable**: Grade Class
+
 **GradeClass**: Classification of students' grades based on GPA:
+
 0: 'A' (GPA >= 3.5)
 1: 'B' (3.0 <= GPA < 3.5)
 2: 'C' (2.5 <= GPA < 3.0)
