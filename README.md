@@ -66,8 +66,8 @@ Extracurricular: Participation in extracurricular activities, where 0 indicates 
 
 **GradeClass**: Classification of students' grades based on GPA:
 
-0: 'A' (GPA >= 3.5)
-1: 'B' (3.0 <= GPA < 3.5)
-2: 'C' (2.5 <= GPA < 3.0)
-3: 'D' (2.0 <= GPA < 2.5)
-4: 'F' (GPA < 2.0)
+0. 'A' (GPA >= 3.5)
+1. 'B' (3.0 <= GPA < 3.5)
+2. 'C' (2.5 <= GPA < 3.0)
+3. 'D' (2.0 <= GPA < 2.5)
+4. 'F' (GPA < 2.0)
