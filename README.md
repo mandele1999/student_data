@@ -15,6 +15,7 @@ The primary objective of this project is to leverage data science techniques to 
 - **Build a User-Friendly Tool (Optional)**: Create an interactive dashboard or application to allow users to input data and receive predictions or insights in real-time.
 
 ### Student Information
+
 **Student ID**
 StudentID: A unique identifier assigned to each student (1001 to 3392).
 
@@ -54,6 +55,7 @@ StudentID: A unique identifier assigned to each student (1001 to 3392).
 ### Extracurricular Activities
 
 Extracurricular: Participation in extracurricular activities, where 0 indicates No and 1 indicates Yes.
+
 - Sports: Participation in sports, where 0 indicates No and 1 indicates Yes.
 - Music: Participation in music activities, where 0 indicates No and 1 indicates Yes.
 - Volunteering: Participation in volunteering, where 0 indicates No and 1 indicates Yes.
