@@ -23,10 +23,12 @@ StudentID: A unique identifier assigned to each student (1001 to 3392).
 - Age: The age of the students ranges from 15 to 18 years.
 - Gender: Gender of the students, where 0 represents Male and 1 represents Female.
 - Ethnicity: The ethnicity of the students, coded as follows:
+  
 0: Caucasian
 1: African American
 2: Asian
 3: Other
+
 - ParentalEducation: The education level of the parents, coded as follows:
 0: None
 1: High School
@@ -39,7 +41,7 @@ StudentID: A unique identifier assigned to each student (1001 to 3392).
 - StudyTimeWeekly: Weekly study time in hours, ranging from 0 to 20.
 - Absences: Number of absences during the school year, ranging from 0 to 30.
 - Tutoring: Tutoring status, where 0 indicates No and 1 indicates Yes.
-- 
+  
 ### Parental Involvement
 
 - ParentalSupport: The level of parental support, coded as follows:
