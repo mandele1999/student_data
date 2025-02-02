@@ -73,3 +73,5 @@ Extracurricular: Participation in extracurricular activities, where 0 indicates 
 2. 'C' (2.5 <= GPA < 3.0)
 3. 'D' (2.0 <= GPA < 2.5)
 4. 'F' (GPA < 2.0)
+   
+[Data Source](https://www.kaggle.com/datasets/rabieelkharoua/students-performance-dataset)
