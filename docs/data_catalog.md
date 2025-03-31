@@ -38,7 +38,7 @@ The education level of the parents, is coded as follows:
 - Tutoring: Tutoring status, where 0 indicates No and 1 indicates Yes.
   
 ### Parental Involvement
-- ParentalSupport: The level of parental support, coded as follows:
+ParentalSupport: The level of parental support, coded as follows:
   
 0: None
 
