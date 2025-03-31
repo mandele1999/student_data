@@ -1,4 +1,4 @@
-# 🏫 Student Performance Predictor
+# 🏫 Student Performance Prediction
 
 ## Objectives
 
