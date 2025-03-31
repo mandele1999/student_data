@@ -11,15 +11,24 @@ StudentID: A unique identifier assigned to each student (1001 to 3392).
 - Ethnicity: The ethnicity of the students, coded as follows:
   
 0: Caucasian
+
 1: African American
+
 2: Asian
+
 3: Other
 
-- ParentalEducation: The education level of the parents, coded as follows:
+### ParentalEducation: 
+The education level of the parents, is coded as follows:
+
 0: None
+
 1: High School
+
 2: Some College
+
 3: Bachelor's
+
 4: Higher
 
 ### Study Habits
@@ -29,12 +38,16 @@ StudentID: A unique identifier assigned to each student (1001 to 3392).
 - Tutoring: Tutoring status, where 0 indicates No and 1 indicates Yes.
   
 ### Parental Involvement
-
 - ParentalSupport: The level of parental support, coded as follows:
+  
 0: None
+
 1: Low
+
 2: Moderate
+
 3: High
+
 4: Very High
 
 ### Extracurricular Activities
