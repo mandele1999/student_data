@@ -47,8 +47,8 @@ student-performance-project/
 ### 1.Clone the Repository
 
 ```plaintext
-git `clone` https://github.com/mandele1999/student_data.git
-cd student-performance-project
+git `clone` https://github.com/mandele1999/student_performance_project.git
+cd student_performance_project
 ```
 
 ### 2. Install Required Packages
@@ -80,7 +80,6 @@ streamlit run streamlit_app.py
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-
 
 ## Acknowledgements
 
