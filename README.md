@@ -17,7 +17,7 @@ The primary objective of this project is to leverage data science techniques to 
 ## 📁 Project Structure
 
 ```plaintext
-student-performance-project/
+student_performance_project/
 │
 ├── data/
 │   ├── raw/                          
