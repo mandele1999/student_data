@@ -23,7 +23,9 @@ student-performance-project/
 │   ├── raw/                          
 │   ├── processed/                   
 │   └── feature_engineered_student_data.csv
-│
+├── docs/                                                 
+│   └── data_catalog.md
+|
 ├── models/
 │   ├── student_gpa_regression_model.pkl
 │   └── student_data_preprocessing_pipeline.pkl
