@@ -1,4 +1,4 @@
-# 🏫 Student Performance Prediction
+# Student Performance Prediction
 
 [![Python](https://img.shields.io/badge/Python-3.9-blue.svg)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Built%20with-Streamlit-red)](https://streamlit.io/)
@@ -14,7 +14,7 @@ This project focuses on predicting academic performance among secondary school s
 - Classify students as **at-risk** based on predicted GPA (below a threshold)
 - Uncover key factors that influence student success
 
-By combining academic, behavioral, and demographic features, this project empowers educators with early warnings and data-driven insights.
+This project empowers educators with early warnings and data-driven insights by combining academic, behavioral, and demographic features.
 
 ---
 
@@ -33,7 +33,7 @@ The dataset contains a range of features such as:
 ## 🎯 Features / Objectives
 
 - ✅ **GPA Prediction**: Estimate students' GPA using regression techniques
-- ✅ **At-Risk Classification**: Flag students as "At Risk" when predicted GPA is below 2.0
+- ✅ **At-Risk Classification**: Flag students as "At Risk" when the predicted GPA is below 2.0
 - ✅ **Feature Importance**: Analyze key factors driving academic performance
 - ✅ **Streamlit App**: Provide a simple user interface for live predictions
 - ✅ **Insights for Educators**: Offer actionable data to improve student outcomes
@@ -42,7 +42,7 @@ The dataset contains a range of features such as:
 
 ## Installation & Setup
 
-### 1.Clone the Repository
+### 1. Clone the Repository
 
 ```plaintext
 git `clone` https://github.com/mandele1999/student_performance_project.git
