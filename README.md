@@ -114,12 +114,23 @@ Once the app is running:
 
 ✅ App Feedback: Real-time, easy-to-understand results to assist decision-makers in schools
 
+## 🤝 Contributing
+
+Contributions are welcome! If you'd like to add improvements, raise issues, or contribute new ideas (e.g., dashboard features, model tuning, or alternative algorithms):
+
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature-xyz`)
+3. Make your changes and commit (`git commit -am 'Add new feature'`)
+4. Push the branch (`git push origin feature-xyz`)
+5. Create a Pull Request
+
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgements
 
-- Thanks to the open-source community for tools like Pandas, Scikit-learn, and Streamlit.
-
-- Dataset inspiration from: [Kaggle - Students Performance Dataset](https://www.kaggle.com/datasets/rabieelkharoua/students-performance-dataset)
+- Open-source Python tools and libraries
+- Contributors and mentors from the data science community
+- [Student Performance Dataset on Kaggle](https://www.kaggle.com/datasets/rabieelkharoua/students-performance-dataset)
