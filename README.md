@@ -77,4 +77,13 @@ streamlit run streamlit_app.py
 - Flag students as "At Risk" or "Not At Risk"
 - Real-time feedback for proactive decision-making
 
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+
+## Acknowledgements
+
+Thanks to the open-source Python community, Kaggle-style student datasets, and all mentors who support data science learning and development.
+
 [Data Source](https://www.kaggle.com/datasets/rabieelkharoua/students-performance-dataset)
