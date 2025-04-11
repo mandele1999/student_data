@@ -1,18 +1,66 @@
 # 🏫 Student Performance Prediction
 
-## Objectives
+[![Python](https://img.shields.io/badge/Python-3.9-blue.svg)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Built%20with-Streamlit-red)](https://streamlit.io/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-The primary objective of this project is to leverage data science techniques to `analyze` and `predict` student performance in secondary school. The project aims to assist educators and administrators in identifying at-risk students and understanding key factors influencing academic success. Below are the specific goals of the project:
+---
 
-- **Predict Student Grades**: Develop a predictive model to estimate student grades based on various demographic, academic, and personal features.
+## 📘 Overview
 
-- **Identify At-Risk Students**: Classify students who may be at risk of underperforming, enabling targeted interventions to support them.
+This project focuses on predicting academic performance among secondary school students using machine learning. The goal is to:
 
-- **Feature Analysis**: Analyze and identify the most influential factors contributing to student performance, such as parental education, family background, health, and study habits.
+- Predict students' **Grade Point Average (GPA)**
+- Classify students as **at-risk** based on predicted GPA (below a threshold)
+- Uncover key factors that influence student success
 
-- **Provide Actionable Insights**: Offer insights and recommendations to educators for improving student outcomes, based on data-driven analysis.
+By combining academic, behavioral, and demographic features, this project empowers educators with early warnings and data-driven insights.
 
-- **Build a User-Friendly Tool (Optional)**: Create an interactive dashboard or application to allow users to input data and receive predictions or insights in real-time.
+---
+
+## 📊 Dataset
+
+The dataset contains a range of features such as:
+
+- Demographics (e.g., gender, ethnicity, age)
+- Academic indicators (e.g., study time, absences, parental education)
+- Behavioral traits (e.g., extracurriculars, volunteering, tutoring)
+
+📄 A full breakdown of features, data types, and example values can be found in the [Data Catalog](docs/data_catalog.md) under the `docs/` folder.
+
+---
+
+## 🎯 Features / Objectives
+
+- ✅ **GPA Prediction**: Estimate students' GPA using regression techniques
+- ✅ **At-Risk Classification**: Flag students as "At Risk" when predicted GPA is below 2.0
+- ✅ **Feature Importance**: Analyze key factors driving academic performance
+- ✅ **Streamlit App**: Provide a simple user interface for live predictions
+- ✅ **Insights for Educators**: Offer actionable data to improve student outcomes
+
+---
+
+## Installation & Setup
+
+### 1.Clone the Repository
+
+```plaintext
+git `clone` https://github.com/mandele1999/student_performance_project.git
+cd student_performance_project
+```
+
+### 2. Install Required Packages
+
+```plaintext
+pip install -r requiremnts.txt
+```
+
+### 3. Launch the Streamlit App
+
+```plaintext
+cd scripts
+streamlit run streamlit_app.py
+```
 
 ## 📁 Project Structure
 
@@ -44,40 +92,24 @@ student_performance_project/
 └── LICENSE
 ```
 
-## How to Run This Project
+## Usage (Streamlit App)
 
-### 1.Clone the Repository
+Once the app is running:
 
-```plaintext
-git `clone` https://github.com/mandele1999/student_performance_project.git
-cd student_performance_project
-```
+- Enter student details (age, study time, absences, etc.)
+- Predict GPA using a trained Linear Regression model
+- See a flag if the student is At Risk (GPA < 2.0)
+- Get instant feedback on potential student performance
 
-### 2. Install Required Packages
+## Results/Insights
 
-```plaintext
-pip install -r requiremnts.txt
-```
+✅ Best Model: Linear Regression for GPA prediction
 
-### 3. Launch the Streamlit App
+✅ Risk Classification: GPA threshold-based approach using predicted values
 
-```plaintext
-cd scripts
-streamlit run streamlit_app.py
-```
+✅ Top Influencers: Parental education, study time, absences, and support systems emerged as significant predictors
 
-## Models and Performance
-
-- Best-performing model: **Linear Regression**
-- Target: **GPA prediction**
-- Threshold for risk classification: **GPA < 2.0**
-
-## Features in the Streamlit App
-
-- Enter student details (age, gender, absences, etc.)
-- Predict GPA using a trained regression model
-- Flag students as "At Risk" or "Not At Risk"
-- Real-time feedback for proactive decision-making
+✅ App Feedback: Real-time, easy-to-understand results to assist decision-makers in schools
 
 ## License
 
@@ -85,6 +117,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgements
 
-Thanks to the open-source Python community, Kaggle-style student datasets, and all mentors who support data science learning and development.
+- Thanks to the open-source community for tools like Pandas, Scikit-learn, and Streamlit.
 
-[Data Source](https://www.kaggle.com/datasets/rabieelkharoua/students-performance-dataset)
+- Dataset inspiration from: [Kaggle - Students Performance Dataset](https://www.kaggle.com/datasets/rabieelkharoua/students-performance-dataset)
