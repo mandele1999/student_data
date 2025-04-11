@@ -3,6 +3,9 @@
 [![Python](https://img.shields.io/badge/Python-3.9-blue.svg)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Built%20with-Streamlit-red)](https://streamlit.io/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Model: Linear Regression](https://img.shields.io/badge/Model-Linear%20Regression-blue)](notebooks/03_modeling.ipynb)
+[![RMSE: 0.45](https://img.shields.io/badge/RMSE-0.45-brightgreen)](notebooks/03_modeling.ipynb)
+
 
 ---
 
