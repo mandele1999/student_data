@@ -27,7 +27,7 @@ student_performance_project/
 │   └── data_catalog.md
 |
 ├── models/
-│   ├── student_gpa_regression_model.pkl
+│   ├── lr_student_grade_model.pkl
 │   └── student_data_preprocessing_pipeline.pkl
 │
 ├── notebooks/
