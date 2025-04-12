@@ -28,7 +28,7 @@ _At Risk → GPA < 2.0_
 _Not At Risk → GPA ≥ 2.0_
 
 Example: This student is **Not At Risk** ✅
-
+---
 _To attach screenshots:_
 
 A screenshot of the full input form
