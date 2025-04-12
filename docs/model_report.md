@@ -13,7 +13,7 @@ In this project, we focused on regression models to predict the GPA of secondary
 ## Performance Metrics
 The models were evaluated using the following regression metrics:
 
-Model          R2 Score        MAE
+        Model          R2 Score        MAE
 - 
 -
 -
