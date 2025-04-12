@@ -1,3 +1,4 @@
+# App Guide
 This guide provides an overview of using the interactive Streamlit application built for the Student Performance Prediction project. The app allows users (e.g., teachers, school administrators, researchers) to input student information and receive real-time predictions about their academic performance and risk level.
 
 ## 🛠 How the App Works
