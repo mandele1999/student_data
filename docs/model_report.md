@@ -21,9 +21,9 @@ Model          R2 Score        MAE
  ## Final Model: Linear Regression
  
 Linear Regression was chosen for the following reasons:
-- Simplicity & Interpretability – Easy to understand and explain predictions to stakeholders.
-- Strong Baseline – Performed competitively across key metrics.
-- Generalization – Low overfitting compared to more complex models.
+- **Simplicity & Interpretability** – Easy to understand and explain predictions to stakeholders.
+- **Strong Baseline** – Performed competitively across key metrics.
+- **Generalization** – Low overfitting compared to more complex models.
 
 ## Hyperparameter Tuning
 Only minimal tuning was done, mainly for regularized models like Ridge and ensemble models. Since Linear Regression had no hyperparameters and performed best, no further tuning was needed.
