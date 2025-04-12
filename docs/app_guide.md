@@ -26,15 +26,13 @@ Example: _Predicted GPA: 3.42_
 Risk Flag - A classification label showing whether the student is at risk.
 Based on the rule:
 
-_At Risk → GPA < 2.0_
-_Not At Risk → GPA ≥ 2.0_
+*_At Risk → GPA < 2.0_
+*_Not At Risk → GPA ≥ 2.0_
 
 Example: This student is **Not At Risk** ✅
 
 _To attach screenshots:_
 
-A screenshot of the full input form
-
-The predicted GPA output
-
-At-risk warning banner
+* A screenshot of the full input form
+* The predicted GPA output
+* At-risk warning banner
