@@ -91,8 +91,10 @@ student_performance_project/
 │   └── 03_modeling.ipynb            
 │
 ├── scripts/
-│   └── streamlit_app.py             
-│
+│   ├── custom_transformers.py
+│    ├── inference.py
+│    └── streamlit_app.py         
+│   
 ├── requirements.txt
 ├── README.md
 ├── .gitignore
