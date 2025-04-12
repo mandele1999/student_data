@@ -31,7 +31,7 @@ Only minimal tuning was done, mainly for regularized models like Ridge and ensem
 ## Risk Classification
 Rather than using a classification model, we derived a binary risk flag from the predicted GPA using a business-rule threshold:
 
-- Threshold: GPA < 2.0 → At Risk
+- Threshold: **GPA < 2.0 → At Risk**
 
 - Otherwise → Not At Risk
 
