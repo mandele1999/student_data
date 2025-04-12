@@ -112,13 +112,10 @@ Once the app is running:
 
 ## Results/Insights
 
-✅ Best Model: Linear Regression for GPA prediction
-
-✅ Risk Classification: GPA threshold-based approach using predicted values
-
-✅ Top Influencers: Parental education, study time, absences, and support systems emerged as significant predictors
-
-✅ App Feedback: Real-time, easy-to-understand results to assist decision-makers in schools
+- **Best Model**: Linear Regression for GPA prediction
+- **Risk Classification**: GPA threshold-based approach using predicted values
+- **Top Influencers**: Parental education, study time, absences, and support systems emerged as significant predictors
+- **App Feedback**: Real-time, easy-to-understand results to assist decision-makers in schools
 
 ## 🤝 Contributing
 
