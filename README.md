@@ -35,11 +35,11 @@ The dataset contains a range of features such as:
 
 ## 🎯 Features / Objectives
 
-- ✅ **GPA Prediction**: Estimate students' GPA using regression techniques
-- ✅ **At-Risk Classification**: Flag students as "At Risk" when the predicted GPA is below 2.0
-- ✅ **Feature Importance**: Analyze key factors driving academic performance
-- ✅ **Streamlit App**: Provide a simple user interface for live predictions
-- ✅ **Insights for Educators**: Offer actionable data to improve student outcomes
+- **GPA Prediction**: Estimate students' GPA using regression techniques
+- **At-Risk Classification**: Flag students as "At Risk" when the predicted GPA is below 2.0
+- **Feature Importance**: Analyze key factors driving academic performance
+- **Streamlit App**: Provide a simple user interface for live predictions
+- **Insights for Educators**: Offer actionable data to improve student outcomes
 
 ---
 
