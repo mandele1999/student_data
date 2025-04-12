@@ -74,9 +74,13 @@ student_performance_project/
 │   ├── raw/                          
 │   ├── processed/                   
 │   └── feature_engineered_student_data.csv
+│
 ├── docs/                                                 
-│   └── data_catalog.md
-|
+│   ├── data_catalog.md
+│   ├── app_guide.md
+|   ├── model_report.md
+│   └── project_overview.md
+│
 ├── models/
 │   ├── lr_student_grade_model.pkl
 │   └── student_data_preprocessing_pipeline.pkl
