@@ -92,8 +92,8 @@ student_performance_project/
 │
 ├── scripts/
 │   ├── custom_transformers.py
-│    ├── inference.py
-│    └── streamlit_app.py         
+│   ├── inference.py
+│   └── streamlit_app.py         
 │   
 ├── requirements.txt
 ├── README.md
