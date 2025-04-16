@@ -51,19 +51,19 @@ _ℹ️ All fields must be filled correctly for the prediction to work. Use drop
 
 After clicking the **"Predict"** button, three results are displayed:
 
-1. **🎓 Predicted GPA**  
+1. **Predicted GPA**  
    A numeric value representing the expected academic performance of the student.  
    _Example: Predicted GPA: **3.42**_
 
-2. **⚠️ Risk Flag (Threshold-Based)**  
+2. **⚠Risk Flag (Threshold-Based)**  
    A classification label showing whether the student is At Risk based on GPA:  
-   - ✅ Not At Risk → GPA ≥ 2.0  
-   - ❌ At Risk → GPA < 2.0  
-   _Example: This student is **Not At Risk** ✅_
+   - Not At Risk → GPA ≥ 2.0  
+   - At Risk → GPA < 2.0  
+   _Example: This student is **Not At Risk**_
 
-3. **🧠 Risk Flag (Classifier-Based)**  
+3. **Risk Flag (Classifier-Based)**  
    A second label from a trained classification model predicting if a student is likely to be at risk.  
-   _Example: Classifier Prediction: **At Risk** ❌_
+   _Example: Classifier Prediction: **At Risk**_
 
 Both risk flags are displayed to help educators **compare the two methods** and decide on interventions more confidently.
 
@@ -71,9 +71,9 @@ Both risk flags are displayed to help educators **compare the two methods** and 
 
 ## 🖼 Screenshots (To Attach)
 
-- ✅ Full input form interface
-- 🎓 Predicted GPA display
-- ⚠️ Threshold-based risk banner
-- 🧠 Classifier-based risk message
+- Full input form interface
+- Predicted GPA display
+- Threshold-based risk banner
+- Classifier-based risk message
 
 ---
