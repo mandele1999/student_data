@@ -1,70 +1,23 @@
-# Description of Dataset 
-### Student Information
+# 📘 Data Dictionary – Student Performance Dataset
 
-**Student ID**
-StudentID: A unique identifier assigned to each student (1001 to 3392).
+| Feature              | Description                                                                 | Type       | Values / Range                                     |
+|----------------------|-----------------------------------------------------------------------------|------------|----------------------------------------------------|
+| `StudentID`          | Unique identifier for each student                                          | Numeric    | 1001 – 3392                                        |
+| `Age`                | Age of the student                                                          | Numeric    | 15 – 18                                            |
+| `Gender`             | Gender of the student                                                       | Categorical| 0 = Male, 1 = Female                               |
+| `Ethnicity`          | Ethnicity category                                                          | Categorical| 0 = Caucasian, 1 = African American, 2 = Asian, 3 = Other |
+| `ParentalEducation`  | Education level of parents                                                  | Categorical| 0 = None, 1 = High School, 2 = Some College, 3 = Bachelor's, 4 = Higher |
+| `StudyTimeWeekly`    | Weekly study time in hours                                                  | Numeric    | 0 – 20                                             |
+| `Absences`           | Number of school absences                                                   | Numeric    | 0 – 30                                             |
+| `Tutoring`           | Whether the student receives tutoring support                               | Binary     | 0 = No, 1 = Yes                                    |
+| `ParentalSupport`    | Level of parental support                                                   | Categorical| 0 = None, 1 = Low, 2 = Moderate, 3 = High, 4 = Very High |
+| `Extracurricular`    | Participation in any extracurricular activity                               | Binary     | 0 = No, 1 = Yes                                    |
+| `Sports`             | Participation in sports                                                     | Binary     | 0 = No, 1 = Yes                                    |
+| `Music`              | Participation in music-related activities                                   | Binary     | 0 = No, 1 = Yes                                    |
+| `Volunteering`       | Participation in volunteering/community service                             | Binary     | 0 = No, 1 = Yes                                    |
+| `GPA`                | Grade Point Average                                                         | Numeric    | 2.0 – 4.0                                          |
+| `GradeClass`         | Classification of student based on GPA (target for classification)          | Categorical| e.g. Low, Medium, High (based on thresholds)       |
 
-### Demographic Details
-
-- Age: The age of the students ranges from 15 to 18 years.
-- Gender: Gender of the students, where 0 represents Male and 1 represents Female.
-- Ethnicity: The ethnicity of the students, coded as follows:
-  
-0: Caucasian
-
-1: African American
-
-2: Asian
-
-3: Other
-
-### ParentalEducation: 
-The education level of the parents, is coded as follows:
-
-0: None
-
-1: High School
-
-2: Some College
-
-3: Bachelor's
-
-4: Higher
-
-### Study Habits
-
-- StudyTimeWeekly: Weekly study time in hours, ranging from 0 to 20.
-- Absences: Number of absences during the school year, ranging from 0 to 30.
-- Tutoring: Tutoring status, where 0 indicates No and 1 indicates Yes.
-  
-### Parental Involvement
-ParentalSupport: The level of parental support, coded as follows:
-  
-0: None
-
-1: Low
-
-2: Moderate
-
-3: High
-
-4: Very High
-
-### Extracurricular Activities
-
-Extracurricular: Participation in extracurricular activities, where 0 indicates No and 1 indicates Yes.
-
-- Sports: Participation in sports, where 0 indicates No and 1 indicates Yes.
-- Music: Participation in music activities, where 0 indicates No and 1 indicates Yes.
-- Volunteering: Participation in volunteering, where 0 indicates No and 1 indicates Yes.
-
-### Academic Performance
-
-**GPA**: Grade Point Average on a scale from 2.0 to 4.0, influenced by study habits, parental involvement, and extracurricular activities.
-
-**Target Variable**: Grade Class
-
-**GradeClass**: Classification of students' grades based on GPA:
 
 0. 'A' (GPA >= 3.5)
 1. 'B' (3.0 <= GPA < 3.5)
