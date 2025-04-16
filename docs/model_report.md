@@ -32,10 +32,10 @@ This project involved both regression and classification tasks:
 
 | Model                   | R² Score | MAE  |
 |------------------------|----------|------|
-| Linear Regression       | 0.78     | 0.18 |
-| Random Forest Regressor| 0.75     | 0.21 |
-| Gradient Boosting       | 0.76     | 0.20 |
-| Ridge Regression        | 0.77     | 0.19 |
+| Linear Regression       | 0.95     | 0.16 |
+| Random Forest Regressor| 0.92     | 0.19 |
+| Gradient Boosting       | 0.93     | 0.24 |
+| Ridge Regression        | --     | -- |
 
 > **Final Model for GPA Prediction:** Linear Regression
 
@@ -45,9 +45,9 @@ This project involved both regression and classification tasks:
 
 | Model                  | Accuracy | Precision | Recall | F1 Score |
 |-----------------------|----------|-----------|--------|----------|
-| Logistic Regression ✅ | 0.91     | 0.88      | 0.85   | 0.86     |
-| Decision Tree          | 0.89     | 0.82      | 0.84   | 0.83     |
-| Random Forest          | 0.90     | 0.85      | 0.84   | 0.84     |
+| Logistic Regression ✅ | 0.94     | 0.94      | 0.94   | 0.94     |
+| Gradient Boosting      | 0.92     | 0.93      | 0.92   | 0.92     |
+| Random Forest          | 0.92     | 0.92      | 0.92   | 0.93     |
 
 > **Final Model for Risk Classification:** Logistic Regression
 
