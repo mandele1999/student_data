@@ -3,5 +3,4 @@ __pycache__/
 *.ipynb_checkpoints
 .env
 .DS_Store
-*.pkl
 data/student_data.csv
