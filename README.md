@@ -29,7 +29,7 @@ The dataset contains a range of features such as:
 - Academic indicators (e.g., study time, absences, parental education)
 - Behavioral traits (e.g., extracurriculars, volunteering, tutoring)
 
-📄 A full breakdown of features, data types, and example values can be found in the [Data Catalog](docs/data_catalog.md) under the `docs/` folder.
+📄 A full breakdown of features, data types, and example values can be found in the [data catalog](docs/data_catalog.md) under the `docs/` folder.
 
 ---
 
