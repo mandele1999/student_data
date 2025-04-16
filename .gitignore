@@ -4,4 +4,4 @@ __pycache__/
 .env
 .DS_Store
 *.pkl
-data/raw/
+data/student_data.csv
