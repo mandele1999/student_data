@@ -16,7 +16,7 @@
 | `Music`              | Participation in music-related activities                                   | Binary     | 0 = No, 1 = Yes                                    |
 | `Volunteering`       | Participation in volunteering/community service                             | Binary     | 0 = No, 1 = Yes                                    |
 | `GPA`                | Grade Point Average                                                         | Numeric    | 2.0 – 4.0                                          |
-| `GradeClass`         | Classification of student based on GPA (target for classification)          | Categorical| e.g. Low, Medium, High (based on thresholds)       |
+| `GradeClass`         | Classification of student based on GPA (target for classification)          | Categorical| e.g. A, B, C, D, F (based on thresholds)       |
 
 
 0. 'A' (GPA >= 3.5)
