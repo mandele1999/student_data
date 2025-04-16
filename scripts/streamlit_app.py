@@ -2,39 +2,71 @@
 # It uses the joblib library to load the pre-trained model and preprocessing pipeline.
 # The application allows users to input student data and get predictions on GPA and risk status.
 
-from custom_transformers import ColumnNameTransformer
 import streamlit as st
 import pandas as pd
-import numpy as np
 import joblib
+from sklearn.base import BaseEstimator, TransformerMixin
 
-# Load pipeline and model
-pipeline = joblib.load('../models/preprocessor_pipeline.pkl')
-model = joblib.load('../models/lr_student_grade_model.pkl')
+st.set_page_config(page_title="Student GPA & Risk Predictor", layout="centered")
+st.title("🎓 Student GPA & Risk Predictor")
+st.markdown("Provide student details below to predict GPA and assess risk status.")
 
-# Page config
-st.set_page_config(page_title="Student GPA Predictor", layout="centered")
+# Custom transformer to retain feature names
+class ColumnNameTransformer(BaseEstimator, TransformerMixin):
+    def __init__(self, transformer, feature_names):
+        self.transformer = transformer
+        self.feature_names = feature_names
 
-st.title("🎓 Student GPA Predictor")
-st.markdown("Enter student information to predict GPA and identify at-risk status.")
+    def fit(self, X, y=None):
+        self.transformer.fit(X, y)
+        return self
 
-# Input form
+    def transform(self, X):
+        X_t = self.transformer.transform(X)
+        return pd.DataFrame(X_t, columns=self.feature_names, index=X.index)
+
+# Load models and preprocessing pipeline
+@st.cache_resource
+def load_components():
+    pipeline = joblib.load("models/preprocessor_pipeline.pkl")
+    reg_model = joblib.load("models/lr_student_grade_model.pkl")
+    cls_model = joblib.load("models/logreg_risk_classifier_model.pkl")
+    return pipeline, reg_model, cls_model
+
+pipeline, reg_model, cls_model = load_components()
+
+# st.write("Pipeline type:", type(pipeline))
+# st.set_page_config(page_title="Student GPA & Risk Predictor", layout="centered")
+# st.title("🎓 Student GPA & Risk Predictor")
+# st.markdown("Provide student details below to predict GPA and assess risk status.")
+
+# --- User Input Form ---
 with st.form("student_form"):
-    gender = st.selectbox("Gender", ['0', '1'])  # Assume 0 = Female, 1 = Male
-    tutoring = st.selectbox("Tutoring Support", ['0', '1'])
-    extracurricular = st.selectbox("Extracurricular Activities", ['0', '1'])
-    sports = st.selectbox("Sports Participation", ['0', '1'])
-    music = st.selectbox("Music Involvement", ['0', '1'])
-    volunteering = st.selectbox("Volunteering", ['0', '1'])
-    parentalsupport = st.selectbox("Parental Support", ['0', '1', '2'])  # Ordinal
-    parentaleducation = st.selectbox("Parental Education Level", ['0', '1', '2'])  # Ordinal
-    ethnicity = st.selectbox("Ethnicity", ['0', '1', '2', '3'])  # Nominal (to be one-hot encoded)
-    studytimeweekly = st.slider("Study Time (hours per week)", 0, 30, 10)
-    absences = st.slider("Number of Absences", 0, 50, 3)
-    age = st.slider("Age", 13, 22, 16)
+    st.header("📋 Student Information")
 
-    submitted = st.form_submit_button("Predict GPA")
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        gender = st.selectbox("Gender", options=[0, 1], format_func=lambda x: "Female" if x == 0 else "Male")
+        age = st.number_input("Age", min_value=10, max_value=25, value=17)
 
+    with col2:
+        tutoring = st.selectbox("Receiving Tutoring?", options=[0, 1], format_func=lambda x: "No" if x == 0 else "Yes")
+        extracurricular = st.selectbox("In Extracurriculars?", options=[0, 1], format_func=lambda x: "No" if x == 0 else "Yes")
+        volunteering = st.selectbox("Volunteering?", options=[0, 1], format_func=lambda x: "No" if x == 0 else "Yes")
+
+    with col3:
+        sports = st.selectbox("Plays Sports?", options=[0, 1], format_func=lambda x: "No" if x == 0 else "Yes")
+        music = st.selectbox("Plays Music?", options=[0, 1], format_func=lambda x: "No" if x == 0 else "Yes")
+
+    parentalsupport = st.selectbox("Parental Support", options=[1, 2, 3], format_func=lambda x: {1: "Low", 2: "Medium", 3: "High"}[x])
+    parentaleducation = st.selectbox("Parental Education", options=[1, 2, 3], format_func=lambda x: {1: "High School", 2: "Undergraduate", 3: "Postgraduate"}[x])
+    ethnicity = st.selectbox("Ethnicity Code", options=[0, 1, 2, 3])  # Adjust codes if you have labels
+    studytimeweekly = st.number_input("Study Time Weekly (hrs)", min_value=0, max_value=100, value=10)
+    absences = st.number_input("Absences", min_value=0, max_value=100, value=3)
+
+    submitted = st.form_submit_button("🔍 Predict")
+
+# --- Prediction Logic ---
 if submitted:
     input_data = pd.DataFrame({
         'gender': [int(gender)],
@@ -52,15 +84,27 @@ if submitted:
     })
 
     try:
-        # Transform input
-        input_transformed = pipeline.transform(input_data)
+        # Preprocess input
+        transformed_input = pipeline.transform(input_data)
 
-        # Predict GPA
-        predicted_gpa = model.predict(input_transformed)[0]
-        risk_status = "At Risk" if predicted_gpa < 2.0 else "Not At Risk"
+        # GPA prediction
+        predicted_gpa = reg_model.predict(transformed_input)[0]
+        gpa_based_risk = "⚠️ At Risk" if predicted_gpa < 2.0 else "✅ Not At Risk"
 
-        st.success(f"🎯 Predicted GPA: **{predicted_gpa:.2f}**")
-        st.info(f"📌 Risk Status: **{risk_status}**")
+        # Risk classification
+        predicted_risk = cls_model.predict(transformed_input)[0]
+        classifier_based_risk = "⚠️ At Risk" if predicted_risk == 1 else "✅ Not At Risk"
+
+        # Display Results
+        st.subheader("📈 Prediction Results")
+
+        col1, col2 = st.columns(2)
+        with col1:
+            st.metric(label="🎯 Predicted GPA", value=f"{predicted_gpa:.2f}")
+            st.markdown(f"**GPA-Based Risk Status**: {gpa_based_risk}")
+        with col2:
+            st.metric(label="📊 Classifier-Based Risk", value=classifier_based_risk)
+            st.markdown("**(Logistic Regression)**")
 
     except Exception as e:
         st.error(f"An error occurred during prediction: {e}")
