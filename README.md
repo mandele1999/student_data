@@ -6,7 +6,6 @@
 [![Model: Linear Regression](https://img.shields.io/badge/Model-Linear%20Regression-blue)](notebooks/03_modeling.ipynb)
 [![RMSE: 0.20](https://img.shields.io/badge/RMSE-0.20-brightgreen)](notebooks/03_modeling.ipynb)
 
-
 ---
 
 ## 📘 Overview
@@ -15,6 +14,7 @@ This project focuses on predicting academic performance among secondary school s
 
 - Predict students' **Grade Point Average (GPA)**
 - Classify students as **at-risk** based on predicted GPA (below a threshold)
+- Compare classification model performance
 - Uncover key factors that influence student success
 
 This project empowers educators with early warnings and data-driven insights by combining academic, behavioral, and demographic features.
@@ -36,7 +36,10 @@ The dataset contains a range of features such as:
 ## 🎯 Features / Objectives
 
 - **GPA Prediction**: Estimate students' GPA using regression techniques
-- **At-Risk Classification**: Flag students as "At Risk" when the predicted GPA is below 2.0
+- **At-Risk Classification**:  
+  - GPA-based risk flagging (Flag students as "At Risk" when the predicted GPA is below 2.0)
+  - Direct classification using trained classifiers
+  - **Model comparison view included in the Streamlit app**
 - **Feature Importance**: Analyze key factors driving academic performance
 - **Streamlit App**: Provide a simple user interface for live predictions
 - **Insights for Educators**: Offer actionable data to improve student outcomes
@@ -55,7 +58,7 @@ cd student_performance_project
 ### 2. Install Required Packages
 
 ```plaintext
-pip install -r requiremnts.txt
+pip install -r requirements.txt
 ```
 
 ### 3. Launch the Streamlit App
@@ -82,8 +85,9 @@ student_performance_project/
 │   └── project_overview.md
 │
 ├── models/
+│   ├── logreg_risk_classifier_model.pkl
 │   ├── lr_student_grade_model.pkl
-│   └── student_data_preprocessing_pipeline.pkl
+│   └── preprocessor_pipeline.pkl
 │
 ├── notebooks/
 │   ├── 01_data_preprocessing.ipynb  
@@ -107,13 +111,16 @@ Once the app is running:
 
 - Enter student details (age, study time, absences, etc.)
 - Predict GPA using a trained Linear Regression model
-- See a flag if the student is At Risk (GPA < 2.0)
+- See two risk classification results:
+  - Based on predicted GPA threshold
+  - From a trained classifier model
+- Compare model outputs in a single view
 - Get instant feedback on potential student performance
 
 ## Results/Insights
 
 - **Best Model**: Linear Regression for GPA prediction
-- **Risk Classification**: GPA threshold-based approach using predicted values
+- **Risk Classification**: Compare both GPA-threshold-based and trained classifier models
 - **Top Influencers**: Parental education, study time, absences, and support systems emerged as significant predictors
 - **App Feedback**: Real-time, easy-to-understand results to assist decision-makers in schools
 
@@ -126,7 +133,6 @@ Contributions are welcome! If you'd like to add improvements, raise issues, or c
 3. Make your changes and commit (`git commit -am 'Add new feature'`)
 4. Push the branch (`git push origin feature-xyz`)
 5. Create a Pull Request
-
 
 ## License
 
