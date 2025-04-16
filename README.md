@@ -8,7 +8,7 @@
 
 ---
 
-## 📘 Overview
+## Overview
 
 This project focuses on predicting academic performance among secondary school students using machine learning. The goal is to:
 
@@ -21,7 +21,7 @@ This project empowers educators with early warnings and data-driven insights by 
 
 ---
 
-## 📊 Dataset
+## Dataset
 
 The dataset contains a range of features such as:
 
@@ -33,7 +33,7 @@ The dataset contains a range of features such as:
 
 ---
 
-## 🎯 Features / Objectives
+## Features / Objectives
 
 - **GPA Prediction**: Estimate students' GPA using regression techniques
 - **At-Risk Classification**:  
