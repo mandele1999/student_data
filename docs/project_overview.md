@@ -94,6 +94,6 @@ The final solution is hosted as an interactive **Streamlit application** where u
 This project was developed with a focus on explainability and real-world application in the education sector.  
 Feel free to fork, star ⭐, or contribute!
 
-_🔗 Check out the app: [Streamlit App Link Here([streamlit_app.py](https://student-performance-predict-app.streamlit.app/))]_  
+_🔗 Check out the app: [([Student Performance Predict App](https://student-performance-predict-app.streamlit.app/))]_  
 _🗂️ Explore the repo: [[Repository](https://github.com/mandele1999/student_performance_project)]_
 
