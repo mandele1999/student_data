@@ -46,42 +46,48 @@ with st.form("student_form"):
 
     col1, col2, col3 = st.columns(3)
     with col1:
-        gender = st.selectbox("Gender", options=[0, 1], format_func=lambda x: "Female" if x == 0 else "Male")
-        age = st.number_input("Age", min_value=10, max_value=25, value=17)
+        gender = st.selectbox("Gender", options=[None, 0, 1], format_func=lambda x: "Select Gender" if x is None else ("Female" if x == 0 else "Male"))
+        age = st.number_input("Age", min_value=10, max_value=25, value=None, placeholder="Enter age (e.g., 17)")
 
     with col2:
-        tutoring = st.selectbox("Receiving Tutoring?", options=[0, 1], format_func=lambda x: "No" if x == 0 else "Yes")
-        extracurricular = st.selectbox("In Extracurriculars?", options=[0, 1], format_func=lambda x: "No" if x == 0 else "Yes")
-        volunteering = st.selectbox("Volunteering?", options=[0, 1], format_func=lambda x: "No" if x == 0 else "Yes")
+        tutoring = st.selectbox("Receiving Tutoring?", options=[None, 0, 1], format_func=lambda x: "Select Option" if x is None else ("No" if x == 0 else "Yes"))
+        extracurricular = st.selectbox("In Extracurriculars?", options=[None, 0, 1], format_func=lambda x: "Select Option" if x is None else ("No" if x == 0 else "Yes"))
+        volunteering = st.selectbox("Volunteering?", options=[None, 0, 1], format_func=lambda x: "Select Option" if x is None else ("No" if x == 0 else "Yes"))
 
     with col3:
-        sports = st.selectbox("Plays Sports?", options=[0, 1], format_func=lambda x: "No" if x == 0 else "Yes")
-        music = st.selectbox("Plays Music?", options=[0, 1], format_func=lambda x: "No" if x == 0 else "Yes")
+        sports = st.selectbox("Plays Sports?", options=[None, 0, 1], format_func=lambda x: "Select Option" if x is None else ("No" if x == 0 else "Yes"))
+        music = st.selectbox("Plays Music?", options=[None, 0, 1], format_func=lambda x: "Select Option" if x is None else ("No" if x == 0 else "Yes"))
 
-    parentalsupport = st.selectbox("Parental Support", options=[1, 2, 3], format_func=lambda x: {1: "Low", 2: "Medium", 3: "High"}[x])
-    parentaleducation = st.selectbox("Parental Education", options=[1, 2, 3], format_func=lambda x: {1: "High School", 2: "Undergraduate", 3: "Postgraduate"}[x])
-    ethnicity = st.selectbox("Ethnicity Code", options=[0, 1, 2, 3])  # Adjust codes if you have labels
-    studytimeweekly = st.number_input("Study Time Weekly (hrs)", min_value=0, max_value=100, value=10)
-    absences = st.number_input("Absences", min_value=0, max_value=100, value=3)
+    parentalsupport = st.selectbox("Parental Support", options=[None, 1, 2, 3], format_func=lambda x: "Select Support Level" if x is None else {1: "Low", 2: "Medium", 3: "High"}[x])
+    parentaleducation = st.selectbox("Parental Education", options=[None, 1, 2, 3], format_func=lambda x: "Select Education Level" if x is None else {1: "High School", 2: "Undergraduate", 3: "Postgraduate"}[x])
+    ethnicity = st.selectbox("Ethnicity", options=[None, 0, 1, 2, 3], format_func=lambda x: "Select Ethnicity" if x is None else {0: "Caucasian", 1: "African American", 2: "Asian", 3: "Other"}[x])
+    studytimeweekly = st.number_input("Study Time Weekly (hrs)", min_value=0, max_value=100, value=None, placeholder="e.g. 10")
+    absences = st.number_input("Absences", min_value=0, max_value=100, value=None, placeholder="e.g. 3")
 
     submitted = st.form_submit_button("🔍 Predict")
 
 # --- Prediction Logic ---
 if submitted:
-    input_data = pd.DataFrame({
-        'gender': [int(gender)],
-        'tutoring': [int(tutoring)],
-        'extracurricular': [int(extracurricular)],
-        'sports': [int(sports)],
-        'music': [int(music)],
-        'volunteering': [int(volunteering)],
-        'parentalsupport': [int(parentalsupport)],
-        'parentaleducation': [int(parentaleducation)],
-        'ethnicity': [int(ethnicity)],
-        'studytimeweekly': [studytimeweekly],
-        'absences': [absences],
-        'age': [age]
-    })
+    if None in (gender, age, tutoring, extracurricular, volunteering, sports, music,
+                parentalsupport, parentaleducation, ethnicity, studytimeweekly, absences):
+        st.warning("Please fill in all required fields before submitting.")
+    else:
+        st.success("Form submitted successfully! Generating Insights...")
+        # proceed with prediction
+        input_data = pd.DataFrame({
+            'gender': [int(gender)],
+            'tutoring': [int(tutoring)],
+            'extracurricular': [int(extracurricular)],
+            'sports': [int(sports)],
+            'music': [int(music)],
+            'volunteering': [int(volunteering)],
+            'parentalsupport': [int(parentalsupport)],
+            'parentaleducation': [int(parentaleducation)],
+            'ethnicity': [int(ethnicity)],
+            'studytimeweekly': [studytimeweekly],
+            'absences': [absences],
+            'age': [age]
+        })
 
     try:
         # Preprocess input
