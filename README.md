@@ -1,7 +1,6 @@
 # Student Performance Prediction
 
-![students](https://github.com/user-attachments/assets/14e30038-fbe8-4089-8fef-4b851281cce5)
-
+![graduation](https://github.com/user-attachments/assets/eb6265f6-415f-49c6-97eb-2f70add4beca)
 
 [![Python](https://img.shields.io/badge/Python-3.9-blue.svg)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Built%20with-Streamlit-red)](https://streamlit.io/)
