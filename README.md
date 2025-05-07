@@ -1,5 +1,8 @@
 # Student Performance Prediction
 
+![students](https://github.com/user-attachments/assets/14e30038-fbe8-4089-8fef-4b851281cce5)
+
+
 [![Python](https://img.shields.io/badge/Python-3.9-blue.svg)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Built%20with-Streamlit-red)](https://streamlit.io/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
